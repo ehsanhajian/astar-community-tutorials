@@ -3,7 +3,9 @@ name: Deploy to AWS S3
   push:
     branches:
       - main
-
+permissions:
+	id-token: write
+	contents: read
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
